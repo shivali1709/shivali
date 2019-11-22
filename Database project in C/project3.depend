@@ -1,0 +1,87 @@
+# depslib dependency file v1.0
+1574306194 source:c:\users\harshil ratnu\desktop\learning\project3\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+
+1574306173 c:\users\harshil ratnu\desktop\learning\project3\linkedlist.h
+	<stdbool.h>
+
+1574311532 source:c:\users\harshil ratnu\desktop\learning\project3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<string.h>
+	<math.h>
+	"repl.h"
+	"Basic_op.h"
+	"Advanced_op.h"
+	"LinkedList.h"
+
+1574193378 c:\users\harshil ratnu\desktop\learning\project3\structs.c
+	"LinkedList.h"
+	<string.h>
+
+1574192798 source:c:\users\harshil ratnu\desktop\learning\project3\structs.c
+	"LinkedList.h"
+
+1574192579 c:\users\harshil ratnu\desktop\learning\project3\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+
+1574192873 source:c:\users\harshil ratnu\desktop\learning\project3\hashing.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<string.h>
+	<math.h>
+
+1574193057 c:\users\harshil ratnu\desktop\learning\project3\hashing.c
+	<string.h>
+	<math.h>
+
+1574193709 source:c:\users\harshil ratnu\desktop\learning\project3\query.c
+
+1574193752 source:c:\users\harshil ratnu\desktop\learning\project3\repl.c
+
+1574193682 c:\users\harshil ratnu\desktop\learning\project3\query.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<string.h>
+	"Structs.h"
+	<math.h>
+
+1574192843 c:\users\harshil ratnu\desktop\learning\project3\repl.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<string.h>
+	<math.h>
+	"query.c"
+
+1574300033 c:\users\harshil ratnu\desktop\learning\project3\structs.h
+	"LinkedList.h"
+	<string.h>
+
+1574310660 c:\users\harshil ratnu\desktop\learning\project3\repl.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<string.h>
+	<math.h>
+	"query.h"
+	"Structs.h"
+
+1574309722 c:\users\harshil ratnu\desktop\learning\project3\query.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<string.h>
+	<math.h>
+
+1574306951 c:\users\harshil ratnu\desktop\learning\project3\basic_op.h
+
+1574302993 c:\users\harshil ratnu\desktop\learning\project3\advanced_op.h
+
