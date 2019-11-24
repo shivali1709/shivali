@@ -1,0 +1,87 @@
+/*
+ * Net ID- kdewnani
+ * Assignment- Project 3
+ * LAB TR 11:05-12:20
+ * Collaborated with Shivali Singh (ssingh53)
+ */
+
+Program Explained:
+
+This project launches fireworks. It contains 2 classes: Fireworks and Fireworks2. The program 
+has a control panel whereby the user inputs the parameters for the launch of the firework. The 
+parameters for the launch for our program are the launch angle, the launch speed, the fuse time 
+(time before the firework explodes), the color of the trajectory, the shape of the firework when it 
+explodes and the type of fireworks. The program also contains a separate Canvas where the 
+firework is painted depending on the parameters entered by the user.
+
+GUI: 
+
+The Fireworks2 class contains the GUI layout. It extends JFrame and implements both 
+ActionListener and ChangeListener. It has a constructor that contains JSliders, JLabels, 
+JComboBoxes, JButtons and JSliders. Next, we have the main method that allows the program to 
+be run and made visible to the user. It sets the frame of the control panel and this is resizable. 
+Next, is the actionPerformed method where any action performed to the JButton or the 
+JComboBox results in a different output. Similarly, with the stateChanged method, a change in 
+the value of the sliders would result in a different output and a different value of the speed, angle 
+and fuse time would be stored. Next is the Frame class which as the name suggests creates the 
+frame, but also creates the Canvas using an object from the Canvas class. The Canvas class 
+contains the paintComponent method in order to paint the fireworks depending on the inputs. An 
+if…else condition is used in order for the program to be able to print different types of fireworks. 
+Every other type except for the “Single” type is in the extra credit of the program. 
+
+Methods: 
+
+The Fireworks class contains the methods for accurately painting the correct shapes 
+and trajectories. This class extends Fireworks2. The two methods Projectile and Endpoint use the 
+formula given in the question in order to calculate the trajectory of the projectile depending on 
+fuse time, speed and angle and the point at which the projectile stops. These two methods are 
+called by the paintComponent method in the Fireworks2 class and therefore the trajectory of the 
+projectile is painted and the Endpoint is known to the program. In this program, there are 7 
+shapes that the fireworks can be. They are as follows: Lines, Circles, Squares, Diamonds, 
+Sparkler, Star (Extra-Credit) and Flower (Extra-Credit). Each of these shapes have a different 
+method in the Fireworks class. In order to create randomness, the random class was imported and 
+incorporated in some of these methods. It should also be noted that each shape of firework has an 
+array that changes the colors, therefore making the firework more visually appealing and 
+colorful.
+
+Extra-Credit Explained: 
+
+This part of the extra-credit comes under the first part of the extra credit. Firing 2 projectiles 
+towards each other and if they come within a certain range, they explode at that point and extra 
+colored lines are painted. This part of the extra-credit comes under the type of firework called 
+“Colliding”. If the type of launch is “Colliding”, it calls the methods DoubleProjectile, 
+DoubleEndpoint and Collision from the Fireworks class. The DoubleProjectile method creates a 
+replica of the single projectile that starts at the bottom right of the canvas. Therefore, there are 2 
+projectiles, one from the left and one from the right. The DoubleEndpoint method simply finds 
+the end point of one projectile launched. The DoubleEndpoint2 method finds the end point of the 
+other firework launched (form the bottom right). It also has a condition that if the end point 
+comes within a certain range, then the final point would be the point at which the two trajectories 
+have come in range. Lastly, the Collision method draws colorful lines that is drawn only when 
+the two projectiles come within range of each other.
+
+This part of the extra-credit comes under the other ideas part of the extra credit. A new type of 
+fireworks whereby three projectiles are initially launched and only when they meet up with each 
+other do they combine into one projectile and explode. There are three initial launches and they 
+all meet up at one common point where they converge into one and launch out until their 
+explosion point. This part of the extra-credit comes under the type of firework called “Multiple 
+Convergence”. If the type of launch is “Multiple Convergence”, the Multipleprojectiles, 
+Endpoint3 and Endpoint4 methods would be called. The Multipleprojectiles method creates 4 
+trajectories, 3 of which are the 3 initial projectiles and the fourth is the final projectile. Endpoint3 
+calculates the end point of the final projectile and sets pointx and pointy to that point on order to 
+draw the shape at that point. Endpoint4 calculates the prevpointx and prevpointy values which in 
+this case is the point at which the 3 initial launches meet. 
+
+This part of the extra credit comes under the third part of the extra-credit. This part creates child 
+projectiles from the main projectile launched. The projectile breaks up into three child projectiles 
+all of which travel a certain distance until they explode. This part of the extra-credit comes under 
+the type of firework called “Multiple Dispersion”. If the type of launch is “Multiple Dispersion”, 
+the Multipleprojectiles2, Endpoint4, Endpoint5, Endpoint6 and Endpoint7 methods would be 
+called. The Multipleprojectiles2 method creates 4 trajectories, 3 of which are the child projectiles 
+an the fourth is the initial projectile. Endpoint 4 calculates the prevpointx and prevpointy values 
+which in this case is the point at which the 3 child projectiles disperse. Endpoint5, Endpoint6 and 
+Endpoint7 methods calculate the end points for each of the child projectiles. 
+
+This part of the extra credit again comes under the other ideas. Two extra shapes were created. 
+The star and the flower shape. For the flower shape, using the polar curves knowledge, and 800 
+small ovals, the outline of the shape was drawn. For the star shape, two for loops were used 
+along with the drawLine method, so that the star could be drawn. 
