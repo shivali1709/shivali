@@ -1,0 +1,31 @@
+/*
+* Name: Shivali Singh
+* NetID: ssingh53
+* Assignment: Project 4
+* Lab Section: TR 11:05 - 12:20
+* I collaborated with Kashish Dewnani (Kdewnani, 31366427)
+*/
+
+Instructions:
+This game is called Lob Pong. You have five lives to begin with but with power ups you can increase this to a maximum of 10. However, the power ups can also act as obstacles/negative buffs. They can reduce your score and your lives or even increase your score. Each color has a different effect. The goal is to continuously hit the ball with your paddle and every time you hit the ball, you gain one point. You must get to level 15 to finish the game. You can change the color of the ball and the paddle and then begin playing by clicking the play button. Enjoy!
+
+Program Explained:
+This program consists of two classes: The GUI class and the lobpong class. 
+
+GUI: 
+The GUI class extends JFrame and implements ActionListener. The GUI class contains a constructor that opens a canvas in order to show the user the instructions and give them the option to change the paddle color and the ball color. Next, the colorSelect method stores the switch case condition that returns the color when it is changed. The actionPerformed method sets what each component of the GUI will do. For example, when the user hits the play button, it will launch the game or when the user changes the color in the JCombo box, the color will be changed. 
+
+Lobpong class:
+
+This class extends JFrame. It contains a constructor with parameters ballColor and paddleColor that creates a canvas for the game. Next, a Canvas sub-class that extends JPanel and extends KeyListener and ActionListener  was created. This class contains a switch case condition that sets the starting angle of the ball to be random.  There are also 3 timers added to this class and the timers are started here. The first timer allows for the movement of the ball and the paddle. Timer2 is for the extra-credit and will be explained in the extra-credit of the README. Timer3 is solely for the timer and allows for an arc of the circle to be cut off depending on the time left in the game.The paintComponent method contains a switch case condition that changes the color and number of rectangles depending on the lives the player has left. It also contains drawstring methods to set and update the score, level, lives remaining and also the title of the game “Lob Pong!!!”. Next, the rectangle (paddle), circle(ball) and arc (timer at top right corner) are drawn. Lastly, there is an if condition that animates “Game Over!” and your score when the game is over (when you have lost all of your lives or when you pass level 15). The keyPressed method allows for the paddle to be controlled by the user when the user uses the arrow keys to move the paddle either left or right. The keyReleased method stops the paddle movement when either of the arrow keys are released. The actionPerformed method contains conditions that contains the formulas for the ball movement, prevent the ball from going past the top or either side of the canvas, prevents the paddle from going past either side of the canvas, reflects the ball off the paddle, does the necessary operations (for example reduce the number of lives) if the ball goes past the paddle and does the necessary operations if the level has been completed. The setHeight method sets the height of the canvas to a variable height. 
+
+
+
+Extra-Credit:
+Stationary Objects: This starts after level 10. For this part of the extra credit, we have added two rectangles on either side of the canvas and if the ball hits any of these, the player's score and lives are affected negatively, positively and neutrally. The positions of these rectangles are random within a certain range of values. They will always be on the left and right of the canvas but their height will change. 
+
+Non-Stationary Objects: This starts after level 5. For this part of the extra-credit, there is a moving circle that starts from the left of the canvas and moves towards the right. Its height and color are randomized; therefore, the non-stationary object is randomized. Similar to the stationary objects, when the ball comes in close proximity to this circle, the player's score could be negatively, positively or neutrally affected. Once the ball hits the circle, the circle vanishes. There is only one powerup per level. 
+
+Other Ideas:
+At the end of the game or when the lives are zero, we have added an animation that shows that the game is over and shows the user their score. 
+We have also added fireworks at the end of the game provided that the player completes all 15 levels.
